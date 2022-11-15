@@ -1,0 +1,18 @@
+{
+  "name": "radiopo",
+  "version": "1.0.0",
+  "description": "A Discord Bot to stream radio channels in your server.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "radio",
+    "music",
+    "discord",
+    "bot"
+  ],
+  "author": "Mukund Kumar Surehli",
+  "license": "ISC"
+}
