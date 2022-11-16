@@ -1,4 +1,5 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { joinVoiceChannel, createAudioPlayer, NoSubscriberBehavior, createAudioResource, StreamType } = require('@discordjs/voice');
+const { SlashCommandBuilder, ChannelType } = require('discord.js');
 const RadioBrowser = require('radio-browser');
 
 function apiCall(country) {
@@ -26,12 +27,30 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('play').setDescription('Play a radio channel of your choice.')
         .addStringOption(option =>
-            option.setName('country').setDescription('Filter stations by country.')),
+            option.setName('country').setDescription('Filter stations by country.'))
+        .addChannelOption(option =>
+            option.setName('channel').setDescription('Selects channel to join')
+                .addChannelTypes(ChannelType.GuildVoice)),
+
     async execute(interaction) {
         const country = interaction.options.getString('country');
+        const voiceChannel = interaction.options.getChannel('channel');
         const print = apiCall(country);
+        const voiceConnection = joinVoiceChannel({
+            channelId: voiceChannel.id,
+            guildId: interaction.guildId,
+            adapterCreator: interaction.guild.voiceAdapterCreator,
+        });
+        const player = createAudioPlayer({
+            behaviors: {
+                noSubscriber: NoSubscriberBehavior.Play,
+            },
+        });
         print.then(function (result) {
             interaction.reply(result);
+            const resource = createAudioResource(result);
+            player.play(resource, { inputtype: StreamType.WebmOpus });
+            voiceConnection.subscribe(player);
         });
     },
 };
