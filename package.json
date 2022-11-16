@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A Discord Bot to stream radio channels in your server.",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,5 +13,16 @@
     "bot"
   ],
   "author": "Mukund Kumar Surehli",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@discordjs/opus": "^0.8.0",
+    "discord-radio-player": "^1.6.0",
+    "discord.js": "^14.6.0",
+    "ffmpeg-static": "^5.1.0",
+    "radio-browser": "^2.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0"
+  }
 }
