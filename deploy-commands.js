@@ -14,7 +14,7 @@ const rest = new REST({ version: '10' }).setToken(token);
 
 (async () => {
     try {
-        console.log(`Started refreshinfg ${commands.length} application (/) commands.`);
+        console.log(`Started refreshing ${commands.length} application (/) commands.`);
 
         const data = await rest.put(
             Routes.applicationCommands(clientId),
