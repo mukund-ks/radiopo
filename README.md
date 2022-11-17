@@ -6,6 +6,8 @@ RADIOPO
 
 [Add to your server](https://discord.com/api/oauth2/authorize?client_id=1042031895711592520&permissions=1002912081984&scope=bot)
 
+Visit the website [here](https://radiopo.xyz/).
+
 Commands
 ========
 * `/play search` - Searches stations to play.
