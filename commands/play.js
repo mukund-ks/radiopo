@@ -21,10 +21,10 @@ function apiCall(stationName) {
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('play').setDescription('Play a radio channel.')
+        .setName('play').setDescription('Plays stations.')
         // Sort by Country subcommand
         .addSubcommand(subcommand =>
-            subcommand.setName('search').setDescription('Search a station.')
+            subcommand.setName('search').setDescription('Searches stations to play.')
                 .addStringOption(option =>
                     option.setName('name').setDescription('Enter the stations\'s name.'))
                 .addChannelOption(option =>
@@ -33,7 +33,7 @@ module.exports = {
         )
         // Play one of top five sub command.
         .addSubcommand(subcommand =>
-            subcommand.setName('top_five').setDescription('Filters stations by Top Votes')
+            subcommand.setName('top_five').setDescription('Filters stations by Top Votes.')
                 .addIntegerOption(option =>
                     option.setName('input').setDescription('(Integer) Choose one of the top five stations.').setMinValue(1).setMaxValue(5))
                 .addChannelOption(option =>
@@ -61,7 +61,7 @@ module.exports = {
             print.then(async function (result) {
                 try {
                     const Title = result[0].name;
-                    const Author = { name: result[0].name, iconURL: 'https://ibb.co/rdK4ZBf', url: result[0].homepage };
+                    const Author = { name: result[0].name, iconURL: 'https://i.postimg.cc/pL5Hm2Dh/radiopo-logo.png', url: result[0].homepage };
                     const Location = result[0].country;
                     const Language = result[0].language;
                     const Votes = result[0].votes;
@@ -83,7 +83,7 @@ module.exports = {
                     voiceConnection.subscribe(player);
                 } catch (e) {
                     // console.log(e);
-                    await interaction.reply(`${searchTerm} is not a valid radio station. Please input a valid one.`);
+                    await interaction.reply(`[Error]${searchTerm} is not a valid radio station. Please input a valid one.`);
                 }
             });
         }
@@ -113,7 +113,7 @@ module.exports = {
             print.then(async function (result) {
                 try {
                     const Title = result[0].name;
-                    const Author = { name: result[0].name, iconURL: 'https://ibb.co/rdK4ZBf', url: result[0].homepage };
+                    const Author = { name: result[0].name, iconURL: 'https://i.postimg.cc/pL5Hm2Dh/radiopo-logo.png', url: result[0].homepage };
                     const Location = result[0].country;
                     const Language = result[0].language;
                     const Votes = result[0].votes;
@@ -135,7 +135,7 @@ module.exports = {
                     voiceConnection.subscribe(player);
                 } catch (e) {
                     console.log(e);
-                    await interaction.reply('The selected station is not available for play. Please try again later.');
+                    await interaction.reply('[Error]The selected station is not available for play. Please try again later.');
                 }
             });
         }
