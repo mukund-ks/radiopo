@@ -68,7 +68,7 @@ module.exports = {
 
                     const embed = new EmbedBuilder()
                         .setColor(0x0099FF)
-                        .setTitle(`Now Playing; ${Title}`)
+                        .setTitle(`Now Playing: ${Title}`)
                         .setAuthor(Author)
                         .addFields(
                             { name: 'Location', value: `${Location}` },
@@ -120,7 +120,7 @@ module.exports = {
 
                     const embed = new EmbedBuilder()
                         .setColor(0x0099FF)
-                        .setTitle(`Now Playing; ${Title}`)
+                        .setTitle(`Now Playing: ${Title}`)
                         .setAuthor(Author)
                         .addFields(
                             { name: 'Location', value: `${Location}` },

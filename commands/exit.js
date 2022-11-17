@@ -4,7 +4,7 @@ const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('exit')
-        .setDescription('removes the bot from voice channel.'),
+        .setDescription('Disconnects from voice channel.'),
     async execute(interaction) {
         try {
             const connection = getVoiceConnection(interaction.guildId);
