@@ -24,6 +24,8 @@ Commands
 
 * `/server` - Gives information about the Discord Server.
 
+* `/invite` - Gives the Bot invite link.
+
 Relevant Links
 ==============
 [Radio Browser](https://www.radio-browser.info/) - The API used to fetch Station information and streaming URLS.
