@@ -61,7 +61,7 @@ module.exports = {
             print.then(async function (result) {
                 try {
                     const Title = result[0].name;
-                    const Author = { name: result[0].name, iconURL: 'https://i.postimg.cc/pL5Hm2Dh/radiopo-logo.png', url: result[0].homepage };
+                    const Author = { name: result[0].name, iconURL: 'https://i.postimg.cc/CxqQBm64/radiopo-logo-2.png', url: result[0].homepage };
                     const Location = result[0].country;
                     const Language = result[0].language;
                     const Votes = result[0].votes;
@@ -76,14 +76,39 @@ module.exports = {
                             { name: 'Votes', value: `${Votes}` },
                         )
                         .setTimestamp();
-
                     await interaction.reply({ embeds: [embed] });
+
                     const resource = createAudioResource(result[0].url_resolved);
                     player.play(resource, { inputtype: StreamType.WebmOpus });
                     voiceConnection.subscribe(player);
                 } catch (e) {
-                    // console.log(e);
-                    await interaction.reply(`[Error]${searchTerm} is not a valid radio station. Please input a valid one.`);
+                    try {
+                        const Title = result[0].name;
+                        const Author = { name: result[0].name, iconURL: 'https://i.postimg.cc/CxqQBm64/radiopo-logo-2.png', url: result[0].homepage };
+                        const Location = result[0].country;
+                        const Language = result[0].language;
+                        const Votes = result[0].votes;
+
+                        const embed = new EmbedBuilder()
+                            .setColor(0x0099FF)
+                            .setTitle(`Now Playing: ${Title}`)
+                            .setAuthor(Author)
+                            .addFields(
+                                { name: 'Location', value: `${Location}` },
+                                { name: 'Language', value: `${Language}` },
+                                { name: 'Votes', value: `${Votes}` },
+                            )
+                            .setTimestamp();
+                        await interaction.reply({ embeds: [embed] });
+
+                        const resource = createAudioResource(result[0].url);
+                        player.play(resource, { inputtype: StreamType.WebmOpus });
+                        voiceConnection.subscribe(player);
+                    } catch {
+                        await interaction.reply(
+                            `[Error] ${searchTerm} isn't a valid radio station or the streaming URL isn't currently working.`,
+                        );
+                    }
                 }
             });
         }
@@ -113,7 +138,7 @@ module.exports = {
             print.then(async function (result) {
                 try {
                     const Title = result[0].name;
-                    const Author = { name: result[0].name, iconURL: 'https://i.postimg.cc/pL5Hm2Dh/radiopo-logo.png', url: result[0].homepage };
+                    const Author = { name: result[0].name, iconURL: 'https://i.postimg.cc/CxqQBm64/radiopo-logo-2.png', url: result[0].homepage };
                     const Location = result[0].country;
                     const Language = result[0].language;
                     const Votes = result[0].votes;
@@ -128,14 +153,40 @@ module.exports = {
                             { name: 'Votes', value: `${Votes}` },
                         )
                         .setTimestamp();
-
                     await interaction.reply({ embeds: [embed] });
+
                     const resource = createAudioResource(result[0].url_resolved);
                     player.play(resource, { inputtype: StreamType.WebmOpus });
                     voiceConnection.subscribe(player);
                 } catch (e) {
-                    console.log(e);
-                    await interaction.reply('[Error]The selected station is not available for play. Please try again later.');
+                    try{
+                        const Title = result[0].name;
+                        const Author = { name: result[0].name, iconURL: 'https://i.postimg.cc/CxqQBm64/radiopo-logo-2.png', url: result[0].homepage };
+                        const Location = result[0].country;
+                        const Language = result[0].language;
+                        const Votes = result[0].votes;
+
+                        const embed = new EmbedBuilder()
+                            .setColor(0x0099FF)
+                            .setTitle(`Now Playing: ${Title}`)
+                            .setAuthor(Author)
+                            .addFields(
+                                { name: 'Location', value: `${Location}` },
+                                { name: 'Language', value: `${Language}` },
+                                { name: 'Votes', value: `${Votes}` },
+                            )
+                            .setTimestamp();
+
+                        await interaction.reply({ embeds: [embed] });
+                        
+                        const resource = createAudioResource(result[0].url);
+                        player.play(resource, { inputtype: StreamType.WebmOpus });
+                        voiceConnection.subscribe(player);
+                    } catch {
+                        await interaction.reply(
+                            '[Error] The selected station isn\'t available for play right now.',
+                        );
+                    }
                 }
             });
         }
