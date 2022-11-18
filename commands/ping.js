@@ -51,14 +51,13 @@ module.exports = {
                         { name: 'Languages', value: `${lang}` },
                         { name: 'Countries', value: `${cnt}` },
                     )
-                    .addFields({ name: '\u200b', value: '\u200b' })
                     .setTimestamp();
     
                 await interaction.reply(`API Server: ${RadioBrowser.service_url}`);
                 await interaction.followUp({ embeds: [embed] });
             } catch (error) {
                 console.log(error);
-                await interaction.reply('[Error] An error occoured. Please try again later.');
+                await interaction.reply('[Error] An error has occoured. Please try again later.');
             }
         });
     },
