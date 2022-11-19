@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder().setName('help').setDescription('Learn about Radiopo.'),
     async execute(interaction) {
         const embed = new EmbedBuilder()
-            .setColor(0x0099FF)
+            .setColor(0xe67e22) // Orange
             .setTitle('Help')
             .setDescription('Radiopo is a bot to play your favourite Radio Stations from the comfort of your Discord Server.')
             .setAuthor({ name: 'Radiopo', iconURL: 'https://i.postimg.cc/CxqQBm64/radiopo-logo-2.png', url: 'https://radiopo.xyz' })

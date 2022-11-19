@@ -9,9 +9,9 @@ module.exports = {
         try {
             const connection = getVoiceConnection(interaction.guildId);
             connection.disconnect();
-            await interaction.reply('Exited from voice channel.');
+            await interaction.reply('**Successfully Disconnected!**');
         } catch (error) {
-            await interaction.reply('I\'m currently not in a voice channel.');
+            await interaction.reply('**Currently not in a voice channel.**');
         }
     },
 };

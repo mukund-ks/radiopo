@@ -1,5 +1,5 @@
 const { joinVoiceChannel, createAudioPlayer, NoSubscriberBehavior, createAudioResource, StreamType } = require('@discordjs/voice');
-const { SlashCommandBuilder, ChannelType, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, ChannelType, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const RadioBrowser = require('radio-browser');
 
 function apiCall(stationName) {
@@ -22,7 +22,7 @@ function apiCall(stationName) {
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('play').setDescription('Plays stations.')
-        // Sort by Country subcommand
+        // Search Station subcommand
         .addSubcommand(subcommand =>
             subcommand.setName('search').setDescription('Searches stations to play.')
                 .addStringOption(option =>
@@ -67,7 +67,7 @@ module.exports = {
                     const Votes = result[0].votes;
 
                     const embed = new EmbedBuilder()
-                        .setColor(0x0099FF)
+                        .setColor(0x0099FF) // Blue
                         .setTitle(`Now Playing: ${Title}`)
                         .setAuthor(Author)
                         .addFields(
@@ -90,7 +90,7 @@ module.exports = {
                         const Votes = result[0].votes;
 
                         const embed = new EmbedBuilder()
-                            .setColor(0x0099FF)
+                            .setColor(0x0099FF) // Blue
                             .setTitle(`Now Playing: ${Title}`)
                             .setAuthor(Author)
                             .addFields(
@@ -105,9 +105,20 @@ module.exports = {
                         player.play(resource, { inputtype: StreamType.WebmOpus });
                         voiceConnection.subscribe(player);
                     } catch {
-                        await interaction.reply(
-                            `[Error] ${searchTerm} isn't a valid radio station or the streaming URL isn't currently working.`,
-                        );
+                        const row = new ActionRowBuilder()
+                            .addComponents(
+                                new ButtonBuilder()
+                                    .setURL('https://www.radio-browser.info/countries')
+                                    .setLabel('Here')
+                                    .setStyle(ButtonStyle.Link),
+                            );
+                        await interaction.reply({ 
+                            content: `**[Error]** *${searchTerm}* isn't a valid radio station or the streaming URL isn't currently working.`, 
+                        });
+                        await interaction.followUp({
+                            content: '**Find a list of valid Radio Stations,**',
+                            components: [row],
+                        });
                     }
                 }
             });
@@ -144,7 +155,7 @@ module.exports = {
                     const Votes = result[0].votes;
 
                     const embed = new EmbedBuilder()
-                        .setColor(0x0099FF)
+                        .setColor(0x0099FF) // Blue
                         .setTitle(`Now Playing: ${Title}`)
                         .setAuthor(Author)
                         .addFields(
@@ -159,7 +170,7 @@ module.exports = {
                     player.play(resource, { inputtype: StreamType.WebmOpus });
                     voiceConnection.subscribe(player);
                 } catch (e) {
-                    try{
+                    try {
                         const Title = result[0].name;
                         const Author = { name: result[0].name, iconURL: 'https://i.postimg.cc/CxqQBm64/radiopo-logo-2.png', url: result[0].homepage };
                         const Location = result[0].country;
@@ -167,7 +178,7 @@ module.exports = {
                         const Votes = result[0].votes;
 
                         const embed = new EmbedBuilder()
-                            .setColor(0x0099FF)
+                            .setColor(0x0099FF) // Blue
                             .setTitle(`Now Playing: ${Title}`)
                             .setAuthor(Author)
                             .addFields(
@@ -178,13 +189,13 @@ module.exports = {
                             .setTimestamp();
 
                         await interaction.reply({ embeds: [embed] });
-                        
+
                         const resource = createAudioResource(result[0].url);
                         player.play(resource, { inputtype: StreamType.WebmOpus });
                         voiceConnection.subscribe(player);
                     } catch {
                         await interaction.reply(
-                            '[Error] The selected station isn\'t available for play right now.',
+                            '**[Error]** The selected station isn\'t available for play right now.',
                         );
                     }
                 }

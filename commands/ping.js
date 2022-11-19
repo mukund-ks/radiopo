@@ -32,7 +32,7 @@ module.exports = {
                 const cnt = result.countries;
     
                 const embed = new EmbedBuilder()
-                    .setColor(0x0099FF)
+                    .setColor(0xe74c3c) // Red
                     .setTitle('Radio Browser API')
                     .setDescription('Pings the Radio Browser API for Statistics.')
                     .addFields(
@@ -52,12 +52,15 @@ module.exports = {
                         { name: 'Countries', value: `${cnt}` },
                     )
                     .setTimestamp();
-    
-                await interaction.reply(`API Server: ${RadioBrowser.service_url}`);
+                try{
+                    await interaction.reply(`**API Server:** ${RadioBrowser.service_url}`);
+                } catch {
+                    await interaction.reply('**[Error]** Unable to get API Service URL.');
+                }
                 await interaction.followUp({ embeds: [embed] });
             } catch (error) {
                 console.log(error);
-                await interaction.reply('[Error] An error has occoured. Please try again later.');
+                await interaction.reply('**[Error]** An error has occoured. Please try again later.');
             }
         });
     },

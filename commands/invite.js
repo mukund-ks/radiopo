@@ -11,6 +11,6 @@ module.exports = {
                     .setLabel('Invite')
                     .setStyle(ButtonStyle.Link),
             );
-        await interaction.reply({ content: 'Invite me to your server by clicking the button below.', components: [row] });
+        await interaction.reply({ content: '**Invite me to your server by clicking the button below.**', components: [row] });
     },
 };
