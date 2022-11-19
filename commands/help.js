@@ -9,10 +9,13 @@ module.exports = {
             .setDescription('Radiopo is a bot to play your favourite Radio Stations from the comfort of your Discord Server.')
             .setAuthor({ name: 'Radiopo', iconURL: 'https://i.postimg.cc/CxqQBm64/radiopo-logo-2.png', url: 'https://radiopo.xyz' })
             .addFields(
-                { name: '`/play search`', value: 'Search and play a station of your choice. [**Station Names**](https://www.radio-browser.info/countries)' },
+                { name: '`/play search`', value: '**(Name Requied)** Play a station of your choice. [**Station Names**](https://www.radio-browser.info/countries)' },
                 { name: '`/play top_five`', value: 'Play one of the top voted stations.' },
                 { name: '`/exit`', value: 'Disconnects the bot from active voice channel.' },
                 { name: '`/ping`', value: 'Pings the Radio Browser API for statistics.' },
+                { name: '`/invite`', value: 'Get an invite link for the Bot.' },
+                { name: '`/user`', value: 'Information about you!' },
+                { name: '`/server`', value: 'Information about your Server!' },
                 { name: '\u200B', value: '[**Visit the website**](https://radiopo.xyz)', inline: true },
                 { name: '\u200B', value: '[**Report Issues**](https://github.com/mukund-ks/radiopo/issues)', inline: true },
             )
