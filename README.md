@@ -28,10 +28,14 @@ Commands
 
 * `/help` - Learn about Radiopo.
 
-Relevant Links
+Built with
 ==============
+[NodeJS](https://nodejs.org/en/about/)
+
 [Radio Browser](https://www.radio-browser.info/) - The API used to fetch Station information and streaming URLS.
 
 [Radio Browser API Client](https://github.com/nepodev/radio-browser) - NodeJS module for Radio-browser API.
+
+[Discord.js](https://discord.js.org/#/) - NodeJS module for Discord.
 
  [^1]: List of Radio Stations [here](https://www.radio-browser.info/countries).
