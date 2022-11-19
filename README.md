@@ -26,6 +26,8 @@ Commands
 
 * `/invite` - Gives the Bot invite link.
 
+* `/help` - Learn about Radiopo.
+
 Relevant Links
 ==============
 [Radio Browser](https://www.radio-browser.info/) - The API used to fetch Station information and streaming URLS.
