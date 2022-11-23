@@ -7,8 +7,8 @@ body {
 }
 
 .Navbar {
-    background-color: #261C2C;
-    color: #E9A6A6;
+    background-color: #393E46;
+    color: #A27B5C;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -21,10 +21,12 @@ body {
 
 .siteTitle {
     font-size: 50px;
+    font-weight: 600;
 }
 
 .radiopoLogo{
-    width: 115px;
+    width: 120px;
+    filter: invert(53%) sepia(37%) saturate(407%) hue-rotate(345deg) brightness(89%) contrast(89%);
 }
 
 .Navbar ul {
@@ -46,12 +48,13 @@ body {
 
 .btn {
     background-color: inherit;
-    color: #E9A6A6;
+    color: #A27B5C;
     border: none;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 600;
     transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-    background-color: #312233;
+    background-color: #30343b;
 }
