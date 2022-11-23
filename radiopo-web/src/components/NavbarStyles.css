@@ -6,26 +6,37 @@ body {
     margin: 0;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .Navbar {
     background-color: #393E46;
     color: #A27B5C;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: stretch;
     gap: 32px;
-    padding: 0px 16px;
-    margin: 20px 10px;
+    padding: 8px 16px;
+    margin: 10px 10px;
     border: none;
     border-radius: 15px;
 }
 
 .siteTitle {
+    margin-top: 10px;
     font-size: 50px;
     font-weight: 600;
+    text-decoration: none;
+    color: #A27B5C;
 }
 
 .radiopoLogo{
-    width: 120px;
+    margin-right: 20px;
+    padding: 5px;
+    width: 75px;
     filter: invert(53%) sepia(37%) saturate(407%) hue-rotate(345deg) brightness(89%) contrast(89%);
 }
 
@@ -50,8 +61,10 @@ body {
     background-color: inherit;
     color: #A27B5C;
     border: none;
+    border-radius: 10px;
     font-size: 22px;
     font-weight: 600;
+    margin: 0px 18px;
     transition: all 0.3s ease-in-out;
 }
 
