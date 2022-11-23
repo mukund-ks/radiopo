@@ -1,4 +1,4 @@
-![alt text](https://i.postimg.cc/Lsvj7dnY/radiopo-logo-transparent-white-2.png "Radiopo")
+![alt text](https://i.postimg.cc/jdHNBtrZ/radiopo-logo-transparent-white-2.png "Radiopo")
 
 RADIOPO
 =======
