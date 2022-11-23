@@ -8,7 +8,7 @@ body {
 
 .Footer {
     background-color: #393E46;
-    color: #A27B5C;
+    color: #8FA2A6;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -17,6 +17,7 @@ body {
     margin: 20px 10px;
     border: none;
     border-radius: 15px;
+    /* font-weight: 600; */
 }
 
 .content {
@@ -29,6 +30,6 @@ body {
 
 .content a {
     text-decoration: none;
-    color: #A27B5C;
+    color: #8FA2A6;
     margin: 0px 15px;
 }

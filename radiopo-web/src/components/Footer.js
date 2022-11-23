@@ -14,7 +14,7 @@ function Footer(){
                     <a href='https://github.com/mukund-ks/radiopo'>Github</a>
                 </h3>
                 <h3>
-                    <a href='https://github.com/mukund-ks/radiopo'>Support</a>
+                    <a href='https://discord.gg/RP6HwWAtcK'>Support</a>
                 </h3>
             </div>
         </div>

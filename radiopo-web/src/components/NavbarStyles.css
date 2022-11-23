@@ -13,8 +13,7 @@ body {
 }
 
 .Navbar {
-    background-color: #393E46;
-    color: #A27B5C;
+    background-color: #8FA2A6;
     display: flex;
     justify-content: space-around;
     align-items: stretch;
@@ -30,7 +29,7 @@ body {
     font-size: 50px;
     font-weight: 600;
     text-decoration: none;
-    color: #A27B5C;
+    color: #8FA2A6;
 }
 
 .radiopoLogo{
@@ -59,7 +58,7 @@ body {
 
 .btn {
     background-color: inherit;
-    color: #A27B5C;
+    color: #333333;
     border: none;
     border-radius: 10px;
     font-size: 22px;
@@ -69,5 +68,5 @@ body {
 }
 
 .btn:hover {
-    background-color: #30343b;
+    background-color: #728185;
 }
