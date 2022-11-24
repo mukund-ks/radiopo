@@ -4,7 +4,7 @@ RADIOPO
 =======
  A bot to play your favourite Radio Stations from the comfort of your Discord Server.
 
-[Add to your server](https://discord.com/api/oauth2/authorize?client_id=1042031895711592520&permissions=1002912081984&scope=bot)
+[Add to your server](https://discord.com/api/oauth2/authorize?client_id=1042031895711592520&permissions=418796398656&scope=bot)
 
 Visit the website [here](https://radiopo.xyz/).
 
