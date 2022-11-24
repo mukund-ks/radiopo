@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/radiopo/static/css/main.5a30428a.css",
+    "main.js": "/radiopo/static/js/main.3a627665.js",
+    "index.html": "/radiopo/index.html",
+    "main.5a30428a.css.map": "/radiopo/static/css/main.5a30428a.css.map",
+    "main.3a627665.js.map": "/radiopo/static/js/main.3a627665.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a30428a.css",
+    "static/js/main.3a627665.js"
+  ]
+}
