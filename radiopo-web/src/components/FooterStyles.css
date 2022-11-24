@@ -15,7 +15,7 @@ body {
     gap: 32px;
     padding: 0px 30px;
     margin: 20px 10px;
-    border: none;
+    /* border-top: 2px solid #FFD369; */
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }

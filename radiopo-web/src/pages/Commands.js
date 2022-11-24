@@ -5,12 +5,13 @@ function Commands(){
         <div className='commands-container'>
             <div className="command">
                 <h3>/play search</h3>
-                <p>Searches the name of station provided as input and plays it.</p>
-                <p>Find Station Names <a href='https://www.radio-browser.info/countries' target='_blank' rel='noreferrer'>here.</a></p>
+                <p>
+                    Plays the Station by provided name. <br></br>Find Station Names <a href='https://www.radio-browser.info/countries' target='_blank' rel='noreferrer'>here.</a>
+                </p>
             </div>
             <div className="command">
                 <h3>/play top_five</h3>
-                <p>Filters stations by top five voted.</p>
+                <p>Filters Stations by Top Five Voted ones.</p>
             </div>
             <div className="command">
                 <h3>/exit</h3>

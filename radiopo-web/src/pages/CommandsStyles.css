@@ -10,17 +10,21 @@ body {
     width: 100%;
     margin: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: stretch;
+    align-self: auto;
     color: #EEEEEE;
 }
 
 .command {
     width: 25%;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     text-align: center;
     border-bottom: 2px solid #FFD369;
     border-radius: 20px;
@@ -32,7 +36,6 @@ body {
 
 p {
     transition: all 0.3s ease-in-out;
-    margin-top: 5px;
 }
 
 .command a {
@@ -40,6 +43,7 @@ p {
 }
 .command p {
     opacity: 0;
+    /* margin: 5px; */
 }
 
 .command:hover p {
