@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/radiopo/static/css/main.5a30428a.css",
-    "main.js": "/radiopo/static/js/main.104a4234.js",
+    "main.js": "/radiopo/static/js/main.77044e2e.js",
     "index.html": "/radiopo/index.html",
     "main.5a30428a.css.map": "/radiopo/static/css/main.5a30428a.css.map",
-    "main.104a4234.js.map": "/radiopo/static/js/main.104a4234.js.map"
+    "main.77044e2e.js.map": "/radiopo/static/js/main.77044e2e.js.map"
   },
   "entrypoints": [
     "static/css/main.5a30428a.css",
-    "static/js/main.104a4234.js"
+    "static/js/main.77044e2e.js"
   ]
 }
