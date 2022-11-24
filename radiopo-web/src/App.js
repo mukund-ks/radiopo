@@ -12,9 +12,9 @@ function App() {
       <div className='content-wrap'>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/commands' element={<Commands />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/radiopo/' element={<Home />} />
+          <Route path='/radiopo/commands' element={<Commands />} />
+          <Route path='/radiopo/about' element={<About />} />
         </Routes>
       </div>
       <Footer />
