@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './NavbarStyles.css';
 
 function Navbar(){
@@ -12,13 +13,16 @@ function Navbar(){
             <nav className='Navbar'>
                 <ul>
                     <button className='btn'>
-                        <a href='/radiopo/'>Home</a>
+                        <Link to='/'>Home</Link>
+                        {/* <a href='/radiopo/'>Home</a> */}
                     </button>
                     <button className='btn'>
-                        <a href='/radiopo/commands/'>Commands</a>
+                        <Link to='/commands/'>Commands</Link>
+                        {/* <a href='/radiopo/commands/'>Commands</a> */}
                     </button>
                     <button className='btn'>
-                        <a href='/radiopo/about/'>About</a>
+                        <Link to='/about/'>About</Link>
+                        {/* <a href='/radiopo/about/'>About</a> */}
                     </button>
                 </ul>
             </nav>
