@@ -8,7 +8,7 @@ body {
 
 .Footer {
     background-color: #393E46;
-    color: #8FA2A6;
+    color: #EEEEEE;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -30,6 +30,6 @@ body {
 
 .content a {
     text-decoration: none;
-    color: #8FA2A6;
+    color: #EEEEEE;
     margin: 0px 15px;
 }

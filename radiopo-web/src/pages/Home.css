@@ -12,21 +12,20 @@ body {
     padding-left: 20px;
     padding-right: auto;
     margin: 20px -100px 20px 10px;
-    background: rgb(143,162,166);
-    background: linear-gradient(90deg, rgba(143,162,166,1) 2%, rgba(251,245,245,0) 100%);
+    background: rgb(255,211,105);
+    background: linear-gradient(90deg, rgba(255,211,105,1) -5%, rgba(251,245,245,0) 90%);
     border-radius: 20px;
-
 }
 
 .text-upper h3 {
-    color: #333333;
+    color: #222831;
     font-size: 85px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .text-lower h3 {
-    color: #333333;
+    color: #222831;
     font-size: 30px;
     margin-top: 40px;
 }
@@ -38,8 +37,7 @@ body {
 .radiopo-logo {
     margin-top: 10px;
     width: 400px;
-    /* filter: invert(67%) sepia(21%) saturate(199%) hue-rotate(143deg) brightness(92%) contrast(83%); */
-    filter: invert(65%) sepia(40%) saturate(185%) hue-rotate(143deg) brightness(93%) contrast(88%);
+    filter: invert(10%) sepia(1%) saturate(0%) hue-rotate(226deg) brightness(98%) contrast(84%);
 }
 
 .right-container {
@@ -55,12 +53,14 @@ body {
     padding: 10px;
     font-size: 20px;
     border: none;
-    background-color: #8FA2A6;
+    background-color: #393E46;
+    color: #EEEEEE;
     border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: all 0.3s ease-in-out;
 }
 
 .invite-btn:hover{
     cursor: pointer;
-    background-color: #728185;
+    background-color: #2b2f36;
 }

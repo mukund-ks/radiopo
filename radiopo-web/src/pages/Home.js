@@ -13,7 +13,9 @@ function Home(){
             </div>
             <div className='right-container'>
                 <img className='radiopo-logo' src='https://i.postimg.cc/t4bdg7zK/radiopo-logo-transparent-white-2.png' alt='radiopo-logo'></img>
-                <button className='invite-btn'>Invite to your Server.</button>
+                <a href='https://discord.com/api/oauth2/authorize?client_id=1042031895711592520&permissions=418796398656&scope=bot' target='_blank' rel='noreferrer'>
+                    <button className='invite-btn'>Invite to your Server</button>
+                </a>
             </div>
         </div>
     );
