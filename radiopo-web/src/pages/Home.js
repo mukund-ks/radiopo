@@ -5,7 +5,7 @@ function Home(){
         <div className='main'>
             <div className="container">
                 <div className="text-upper">
-                    <h3>Keep Calm</h3> <h3>and</h3> <h3>listen on</h3>
+                    <h3>Keep Calm</h3> <h3>and</h3> <h3>Listen On</h3>
                 </div>
                 <div className="text-lower">
                     <h3>Covering Radio Stations from all over the world.</h3>
