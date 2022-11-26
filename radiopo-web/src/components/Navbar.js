@@ -6,7 +6,7 @@ function Navbar(){
         <div className='Navbar-container'>
             <div className='logo-container'>
                 <img  className='radiopoLogo' src='https://i.postimg.cc/jdHNBtrZ/radiopo-logo-transparent-white-2.png' alt='radiopo-logo'></img>
-                <a href='/' className='siteTitle'>
+                <a href='/radiopo/' className='siteTitle'>
                     Radiopo
                 </a>
             </div>
@@ -16,10 +16,10 @@ function Navbar(){
                         <Link to='/'>Home</Link>
                     </button>
                     <button className='btn'>
-                        <Link to='/commands/'>Commands</Link>
+                        <Link to='/commands'>Commands</Link>
                     </button>
                     <button className='btn'>
-                        <Link to='/about/'>About</Link>
+                        <Link to='/about'>About</Link>
                     </button>
                 </ul>
             </nav>
