@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    clear: both;
 }
 
 body {
@@ -7,20 +8,20 @@ body {
 }
 
 .commands-container {
-    width: 100%;
-    margin: auto;
+    min-width: 50%;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: stretch;
-    align-content: stretch;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
     align-self: auto;
     color: #EEEEEE;
 }
 
 .command {
-    width: 25%;
+    min-width: 50%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -41,9 +42,15 @@ p {
 .command a {
     color: #EEEEEE;
 }
+
+.command h3 {
+    font-size: 20px;    
+}
+
 .command p {
     opacity: 0;
-    /* margin: 5px; */
+    margin: 10px 10px;
+    font-size: 18px;
 }
 
 .command:hover p {

@@ -14,15 +14,12 @@ function Navbar(){
                 <ul>
                     <button className='btn'>
                         <Link to='/'>Home</Link>
-                        {/* <a href='/radiopo/'>Home</a> */}
                     </button>
                     <button className='btn'>
                         <Link to='/commands/'>Commands</Link>
-                        {/* <a href='/radiopo/commands/'>Commands</a> */}
                     </button>
                     <button className='btn'>
                         <Link to='/about/'>About</Link>
-                        {/* <a href='/radiopo/about/'>About</a> */}
                     </button>
                 </ul>
             </nav>

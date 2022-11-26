@@ -6,14 +6,27 @@ body {
     margin: 0;
 }
 
+.main {
+    width: auto;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
 .container {
     border: none;
-    width: 1000px;
+    min-width: 70%;
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
     padding-left: 20px;
     padding-right: auto;
-    margin: 20px -100px 20px 10px;
     background: rgb(255,211,105);
-    background: linear-gradient(90deg, rgba(255,211,105,1) -5%, rgba(251,245,245,0) 90%);
+    background: linear-gradient(90deg, rgba(255,211,105,1) -5%, rgba(251,245,245,0) 100%);
     border-radius: 20px;
 }
 
@@ -30,26 +43,23 @@ body {
     margin-top: 40px;
 }
 
-.main {
-    display: flex;
-}
-
 .radiopo-logo {
-    margin-top: 10px;
-    width: 400px;
+    margin: auto;
+    padding: 5px;
+    max-width: 50%;
     filter: invert(10%) sepia(1%) saturate(0%) hue-rotate(226deg) brightness(98%) contrast(84%);
 }
 
 .right-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
 .invite-btn {
     margin-top: 20px;
-    width: 150px;
+    max-width: 150px;
     padding: 10px;
     font-size: 20px;
     border: none;

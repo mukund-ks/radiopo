@@ -45,7 +45,6 @@ body {
     margin: 0;
     list-style: none;
     display: flex;
-    gap: 16px;
 }
 
 .Navbar a{
@@ -64,7 +63,7 @@ body {
     border-radius: 10px;
     font-size: 22px;
     font-weight: 600;
-    margin: 0px 18px;
+    margin: 0px 10px;
     transition: all 0.3s ease-in-out;
 }
 
