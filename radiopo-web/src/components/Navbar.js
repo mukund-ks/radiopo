@@ -6,7 +6,7 @@ function Navbar(){
         <div className='Navbar-container'>
             <div className='logo-container'>
                 <img  className='radiopoLogo' src='https://i.postimg.cc/jdHNBtrZ/radiopo-logo-transparent-white-2.png' alt='radiopo-logo'></img>
-                <a href='/radiopo/' className='siteTitle'>
+                <a href='/' className='siteTitle'>
                     Radiopo
                 </a>
             </div>
